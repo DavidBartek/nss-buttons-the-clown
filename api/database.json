@@ -1,8 +1,16 @@
 {
-  "clowns": [
-  ],
-  "completions": [
-  ],
+  "clowns": [],
+  "completions": [],
   "reservations": [
+    {
+      "parentName": "John",
+      "childName": "Lil Jonny",
+      "eventDesc": "3rd Birthday",
+      "numAttendees": "1000",
+      "address": "500 ",
+      "eventDate": "2023-07-01",
+      "eventLength": "6",
+      "id": 1
+    }
   ]
 }

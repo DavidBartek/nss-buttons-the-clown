@@ -2,6 +2,8 @@
 //  fields: parentName (input type: text); childName (text); numAttendees (number); address (text); date (date); reservation length (int)
 //  button: Submit Reservation
 
+import { postReservation } from "./dataAccess.js"
+
 export const ReservationForm = () => {
     const html = `
         <div class="field">
@@ -39,5 +41,36 @@ export const ReservationForm = () => {
     return html
 }
 
-// add click event listener: when "submit reservation" button is clicked, invokes API fetch (method: POST)
-//  collect
+const mainContainer = document.querySelector("#container")
+
+// add click event listener: when "submit reservation" button is clicked, invokes postReservation(reservationRequest)
+//  accesses all user-defined inputs from form above, assigns each to a variable
+//  creates object with all variables
+//  invokes postReservation(object)
+
+document.addEventListener(
+    "click",
+    e => {
+        if (e.target.id === "submitReservation") {
+            const parentName = document.querySelector("input[name='resParentName']").value
+            const childName = document.querySelector("input[name='resChildName']").value
+            const eventDesc = document.querySelector("input[name='resEventDesc']").value
+            const numAttendees = document.querySelector("input[name='resNumAttendees']").value
+            const address = document.querySelector("input[name='resAddress']").value
+            const eventDate = document.querySelector("input[name='resEventDate']").value
+            const eventLength = document.querySelector("input[name='resLength']").value
+
+            const reservationObject = {
+                parentName: parentName,
+                childName: childName,
+                eventDesc: eventDesc,
+                numAttendees: numAttendees,
+                address: address,
+                eventDate: eventDate,
+                eventLength: eventLength
+            }
+
+            postReservation(reservationObject)
+        }
+    }
+)

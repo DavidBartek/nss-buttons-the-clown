@@ -79,7 +79,7 @@ export const postReservation = (reservationRequest) => {
         })
 }
 
-export const postCompletion = () => {
+export const postCompletion = (userCompletion) => {
     const fetchOptions = {
         method: "POST",
         headers: {
@@ -100,7 +100,7 @@ export const postCompletion = () => {
 // deletes matching reservation in database.json
 // re-renders HTML
 
-export const deleteReservation = () => {
+export const deleteReservation = (id) => {
     return fetch(`${API}/requests/${id}`, {method: "DELETE"})
         .then(
             () => {
