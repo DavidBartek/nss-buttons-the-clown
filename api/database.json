@@ -1,16 +1,49 @@
 {
-  "clowns": [],
+  "clowns": [
+    {
+      "id": "1",
+      "name": "BUTTONS THE EVIL CLOWN"
+    },
+    {
+      "id": "2",
+      "name": "LOLLIPOP THE BRUTAL CLOWN"
+    },
+    {
+      "id": "3",
+      "name": "PENNYWISE THE KIND CLOWN"
+    }
+  ],
   "completions": [],
   "reservations": [
     {
-      "parentName": "John",
-      "childName": "Lil Jonny",
-      "eventDesc": "3rd Birthday",
-      "numAttendees": "1000",
-      "address": "500 ",
-      "eventDate": "2023-07-01",
+      "parentName": "Mommy",
+      "childName": "Lil Johnny",
+      "eventDesc": "Forf BirfDay",
+      "numAttendees": "6",
+      "address": "1200 Ave A",
+      "eventDate": "2024-01-05",
       "eventLength": "6",
       "id": 1
+    },
+    {
+      "parentName": "Jill",
+      "childName": "Joe",
+      "eventDesc": "Retirement Party",
+      "numAttendees": "2",
+      "address": "1600 Pennsylvania Ave",
+      "eventDate": "2024-01-20",
+      "eventLength": "2",
+      "id": 2
+    },
+    {
+      "parentName": "Melania",
+      "childName": "Donald",
+      "eventDesc": "Going to Jail Party",
+      "numAttendees": "01062020",
+      "address": "Miami",
+      "eventDate": "2023-08-14",
+      "eventLength": "6",
+      "id": 3
     }
   ]
 }

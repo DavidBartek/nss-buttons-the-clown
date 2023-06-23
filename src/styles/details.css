@@ -82,10 +82,10 @@ img {
 } */
 
 .reservations__table--completed {
-    background-color: #fbd4d2;
+    background-color: #d5fbd2;
 }
 
-.reservation__delete {
+.reservation__deny {
     color: white;
-    background-color: #a547dc;
+    background-color: #dc4747;
 }

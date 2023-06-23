@@ -22,7 +22,7 @@ export const Clowns = () => {
             <tr class="reservations__table--header">
                 <th>Date</th>
                 <th>Reservation</th>
-                <th>Select Clown</th>
+                <th>Who Has Dibs</th>
                 <th></th>
             </tr>
             ${Reservations()}

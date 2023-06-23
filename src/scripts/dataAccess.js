@@ -21,7 +21,7 @@ export const getClowns = () => {
 }
 
 export const getCompletions = () => {
-    return applicationState.reservations.map(reservation => ({...reservation}))
+    return applicationState.completions.map(completion => ({...completion}))
 }
 
 // API FETCH - REQUESTS
@@ -63,13 +63,13 @@ export const fetchCompletions = () => {
 // posts the object to selected location in database.json
 // re-renders HTML
 
-export const postReservation = (reservationRequest) => {
+export const postReservation = (reservationObject) => {
     const fetchOptions = {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(reservationRequest)
+        body: JSON.stringify(reservationObject)
     }
 
     return fetch (`${API}/reservations`, fetchOptions)
@@ -79,13 +79,13 @@ export const postReservation = (reservationRequest) => {
         })
 }
 
-export const postCompletion = (userCompletion) => {
+export const postCompletion = (completionObject) => {
     const fetchOptions = {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(userCompletion)
+        body: JSON.stringify(completionObject)
     }
 
     return fetch (`${API}/completions`, fetchOptions)
@@ -101,7 +101,7 @@ export const postCompletion = (userCompletion) => {
 // re-renders HTML
 
 export const deleteReservation = (id) => {
-    return fetch(`${API}/requests/${id}`, {method: "DELETE"})
+    return fetch(`${API}/reservations/${id}`, {method: "DELETE"})
         .then(
             () => {
                 mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
