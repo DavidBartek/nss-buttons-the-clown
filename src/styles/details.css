@@ -3,18 +3,37 @@
     margin-bottom: 1em;
 }
 
+.header__text {
+    display: flex;
+    flex-direction: column;
+}
+
 h1 {
-    margin-left: 2em;
+    margin-left: 1em;
+    margin-bottom: 0;
     align-self: end;
+}
+
+.header__subhead {
+    text-align: right;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+p {
+    margin-top: .5em;
+    margin-left: 6em;
+    align-self: start;
+    font-style: italic;
 }
 
 img {
     border-radius: 50%;
-    width: 100px;
+    width: 110px;
     height: 100px
 }
 
-.serviceForm {
+.reservationForm {
     display: flex;
     flex-direction: column;
 }
@@ -40,33 +59,33 @@ img {
     background-color: #474ea0;
 }
 
-.serviceRequests__table {
+.reservations__table {
     border-collapse: collapse;
     max-width: 35%;
     min-width: 35%;
 }
 
-.serviceRequests__table td, .serviceRequests__table th {
+.reservations__table td, .reservation__table th {
     padding: 8px;
     border-bottom: 1px solid #6b7a88; 
     border-top: 1px solid #6b7a88;
 }
 
-.serviceRequests__table th {
+.reservations__table th {
     color: white;
     background-color: #6b7a88;
     text-align: left;
 }
 
-/* .serviceRequests__table tr:nth-child(even) {
+/* .reservations__table tr:nth-child(even) {
     background-color: #ebe9e9;
 } */
 
-.serviceRequests__table--completed {
+.reservations__table--completed {
     background-color: #fbd4d2;
 }
 
-.request__delete {
+.reservation__delete {
     color: white;
     background-color: #a547dc;
 }
