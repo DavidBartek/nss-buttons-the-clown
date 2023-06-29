@@ -4,7 +4,7 @@ const applicationState = {
     completions: []
 }
 
-const API = "http://localhost:8088"
+const API = "buttons-the-clown-hsftz.ondigitalocean.app"
 const mainContainer = document.querySelector("#container")
 
 // terminal command: json-server database.json -p 8088 -w
